@@ -18,6 +18,12 @@
                 <!--<span>Scrivania Digitale OIV</span> &lt;!&ndash; <span class="navbar-version">v{{VERSION}}</span> &ndash;&gt;-->
             </a>
         </div>
+        <div ng-show="app == 'iss'">
+            <a class="navbar-brand logo" href="#/" ng-click="vm.collapseNavbar()">
+                <img class="logo-img" src="content/images/logosdcnr.png"/>
+                <span>Scrivania Digitale ISS</span> <!-- <span class="navbar-version">v{{VERSION}}</span> &ndash;&gt;-->
+            </a>
+        </div>
 
     </div>
     <div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()">
@@ -139,12 +145,15 @@
                     </span>
                 </a>
                 <ul class="dropdown-menu" uib-dropdown-menu>
+                    <!--
                     <li ui-sref-active="active" >
                         <a ui-sref="cnrauthority" ng-click="vm.collapseNavbar()">
                             <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                             <span translate="global.menu.entities.cnrauthority">Cnrauthority</span>
                         </a>
                     </li>
+                    -->
+
                     <li ui-sref-active="active" >
                         <a ui-sref="form" ng-click="vm.collapseNavbar()">
                             <span class="glyphicon glyphicon-asterisk"></span>&nbsp;

@@ -425,6 +425,11 @@ select.ng-touched.ng-invalid {
     background: url("../images/oiv-flows-banner.png") center no-repeat;
     background-size: contain;
 }
+.iss-banner {
+    background: url("../images/iss-flows-banner.png") center no-repeat;
+    background-size: contain;
+}
+
 
 .showcase-banner {
     background: url("../images/showcase-flows-banner.png") center no-repeat;
