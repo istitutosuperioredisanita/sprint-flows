@@ -175,7 +175,8 @@ public final class Utils {
             String key = appo.getString("key");
             String value = appo.getString("value");
             String type = appo.getString("type");
-
+            if ( value.isEmpty())
+                continue;
             //solo per le HistoricTaskInstanceQuery si fa la query in base alla data di completamento del task
             if (taskQuery instanceof HistoricTaskInstanceQuery) {
                 try {
