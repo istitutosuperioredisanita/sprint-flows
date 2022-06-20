@@ -83,13 +83,13 @@
                 var searchParamsToSent = [];
                 if (searchParams) {
                     $.map(searchParams, function (value, key) {
-                        if (value) {
+                        if (value ) {
                             var appo = {};
                             appo.type = value.substr(0, value.indexOf('=') + 1);
                             appo.key = key;
                             appo.value = value.substr(value.indexOf('=') + 1);
-
-                            searchParamsToSent.push(appo);
+                            if ( appo.value!=="")
+                                searchParamsToSent.push(appo);
                         }
                     });
                 }
