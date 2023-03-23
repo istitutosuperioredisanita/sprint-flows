@@ -1,9 +1,9 @@
 spring:
   datasource:
     platform: postgres
-    url: jdbc:postgresql://IP:PORT/DB_NAME
-    username: user
-    password: psw
+    url: jdbc:postgresql://172.16.1.44:5432/activiti
+    username: postgres
+    password: admin
     driverClassName: org.postgresql.Driver
   jpa:    
     database: POSTGRESQL
@@ -23,13 +23,13 @@ spring:
 
   port: 8080
   mail:
-    url: http://test.iss.it:8080
+    url: http://localhost:8080
     recipients:  
     activated: true
 
 jhipster:
   mail:
-    from: noreplay@domain.it
+    from: noreplay@iss.it
     
 ajp:
   port: 8099
@@ -42,19 +42,18 @@ cnr:
   storage:
     driver: filesystem
     filesystem:
-      directory: /tmp/sprint-flows-showcase
+      directory: /tmp/sprint-flows
 iss:   
   mail:
-    mail.host: serverMail
-    mail.user: username
-    mail.password: password
+    mail.host: smtp.office365.com
+    mail.user: noreplay@iss.it
+    mail.password: =wEraV[q+j%vSu^;/8*}
     mail.protocol: smtp
-    mail.port: port
-    mail.send.error.to: error@mail.it
-    mail.from: noreplay@domain.it
+    mail.port: 587
+    mail.send.error.to: manlio.mammoli@iss.it
+    mail.smtp.from.default: noreply@iss.it
     mail.tls: true
     mail.encoding: UTF-8
     mail.test-connection: false
     mail.smtp.auth: true
     mail.smtp.starttls.enable: true
-    

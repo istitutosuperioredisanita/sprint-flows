@@ -227,7 +227,9 @@ public class Enum {
         preavvisoRigettoCambioFascia,
         monitoraggioAttivitaCovid19,
         domandaSmartWorking,
-        revocaDomandaSmartWorking;
+        revocaDomandaSmartWorking,
+        contoCapitaleMinInfrastruttura,
+        contoCapitaleMinSalute;
 
         PdfType() {
         }

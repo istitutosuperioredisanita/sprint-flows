@@ -9,10 +9,11 @@ import it.cnr.si.repository.ViewRepository;
 import it.cnr.si.service.RestPdfSiglaService;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JsonDataSource;
+
+import org.activiti.engine.task.Task;
 import org.activiti.engine.HistoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
-import org.activiti.engine.delegate.DelegateExecution;
 import org.activiti.engine.history.HistoricProcessInstance;
 import org.activiti.engine.impl.persistence.entity.VariableInstance;
 import org.activiti.engine.impl.persistence.entity.VariableInstanceEntity;
@@ -362,6 +363,10 @@ public class FlowsPdfService {
 		else if(activeProfiles.contains("cnr")) {
 			dir = new RelaxedPropertyResolver(env, "jasper-report.").getProperty("dir-cnr");
 		}
+		else if(activeProfiles.contains("iss")) {
+			dir = new RelaxedPropertyResolver(env, "jasper-report.").getProperty("dir-iss");
+		}
+		
 		byte[] pdfByteArray = null;
 		HashMap<String, Object> parameters = new HashMap();
 		InputStream jasperFile = null;
@@ -376,10 +381,13 @@ public class FlowsPdfService {
 
 			//carico un'immagine nel pdf "dinamicamente" (sostituisco una variabile nel file jsper con lo stream dell'immagine)
 			if(activeProfiles.contains("oiv")) {
-				parameters.put("ANN_IMAGE", this.getClass().getResourceAsStream(dir.substring(dir.indexOf("/print")) + "logo_OIV.JPG"));
+				parameters.put("ANN_IMAGE", this.getClass().getResourceAsStream(dir.substring(dir.indexOf("/print")) + "ISS.png"));
 			}
 			else if(activeProfiles.contains("cnr")) {
 				parameters.put("ANN_IMAGE", this.getClass().getResourceAsStream(dir.substring(dir.indexOf("/print")) + "logo_CNR.JPG"));
+			}
+			else if(activeProfiles.contains("iss")) {
+				parameters.put("ANN_IMAGE", this.getClass().getResourceAsStream(dir.substring(dir.indexOf("/print")) + "ISS_logoEsteso.JPG"));
 			}
 			parameters.put(JRParameter.REPORT_LOCALE, Locale.ITALIAN);
 			parameters.put(JRParameter.REPORT_RESOURCE_BUNDLE, resourceBundle);
@@ -423,8 +431,16 @@ public class FlowsPdfService {
 		}
 
 		try {
-			String taskId = taskService.createTaskQuery().processInstanceId(processInstanceId).active().singleResult().getId();
-			flowsAttachmentService.saveAttachment(taskId, pdfType.name(), attachment, pdfByteArray);
+			List<Task> tasks = taskService.createTaskQuery().processInstanceId(processInstanceId).active().list();
+		
+			if(tasks.size() == 1) {
+				flowsAttachmentService.saveAttachment(tasks.get(0).getId(), pdfType.name(), attachment, pdfByteArray);	
+			}
+			else {
+				flowsAttachmentService.saveAttachmentFuoriTask(processInstanceId, pdfType.name(), attachment, pdfByteArray);				
+			}
+			//String taskId = taskService.createTaskQuery().processInstanceId(processInstanceId).active().singleResult().getId();
+			//flowsAttachmentService.saveAttachment(taskId, pdfType.name(), attachment, pdfByteArray);
 		}catch (NullPointerException e){
 			flowsAttachmentService.saveAttachmentFuoriTask(processInstanceId, pdfType.name(), attachment, pdfByteArray);
 		}

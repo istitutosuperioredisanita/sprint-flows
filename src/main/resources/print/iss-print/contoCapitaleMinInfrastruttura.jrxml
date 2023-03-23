@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final utlizzo versione della libreria JasperReports6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="exportInfoContoCapitaleMinInfrastruttura" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="27e96cc2-0b83-41aa-a950-ec31d9124f6f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="taskProposes_json" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="taskProposes_json"/>
+		<fieldDescription><![CDATA[taskProposes_json]]></fieldDescription>
+	</field>
+	<field name="titolo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titolo"/>
+		<fieldDescription><![CDATA[titolo]]></fieldDescription>
+	</field>
+	<field name="initiator" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="initiator"/>
+		<fieldDescription><![CDATA[initiator]]></fieldDescription>
+	</field>
+	<field name="commentoCC" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="commentoCC"/>
+		<fieldDescription><![CDATA[commentoCC]]></fieldDescription>
+	</field>
+	<field name="commentoCCGS" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="commentoCCGS"/>
+		<fieldDescription><![CDATA[commentoCCGS]]></fieldDescription>
+	</field>
+	<field name="titoloOrigine" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titoloOrigine"/>
+		<fieldDescription><![CDATA[titoloOrigine]]></fieldDescription>
+	</field>
+	<field name="proroga" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="proroga"/>
+		<fieldDescription><![CDATA[proroga]]></fieldDescription>
+	</field>
+	<field name="commentoCONV" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="commentoCONV"/>
+		<fieldDescription><![CDATA[commentoCONV]]></fieldDescription>
+	</field>
+	<field name="avviaValutazioneProposte" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="avviaValutazioneProposte"/>
+		<fieldDescription><![CDATA[avviaValutazioneProposte]]></fieldDescription>
+	</field>
+	<field name="pathFascicoloDocumenti" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="pathFascicoloDocumenti"/>
+		<fieldDescription><![CDATA[pathFascicoloDocumenti]]></fieldDescription>
+	</field>
+	<field name="fondiMinisteroAssegnati" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="fondiMinisteroAssegnati"/>
+		<fieldDescription><![CDATA[fondiMinisteroAssegnati]]></fieldDescription>
+	</field>
+	<field name="checkCC" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="checkCC"/>
+		<fieldDescription><![CDATA[checkCC]]></fieldDescription>
+	</field>
+	<field name="giorniScadenza" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="giorniScadenza"/>
+		<fieldDescription><![CDATA[giorniScadenza]]></fieldDescription>
+	</field>
+	<field name="annulla" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="annulla"/>
+		<fieldDescription><![CDATA[annulla]]></fieldDescription>
+	</field>
+	<field name="key" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="key"/>
+		<fieldDescription><![CDATA[key]]></fieldDescription>
+	</field>
+	<field name="numeriProtocollo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="numeriProtocollo"/>
+		<fieldDescription><![CDATA[numeriProtocollo]]></fieldDescription>
+	</field>
+	<field name="processDefinitionId" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="processDefinitionId"/>
+		<fieldDescription><![CDATA[processDefinitionId]]></fieldDescription>
+	</field>
+	<field name="processInstanceId" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="processInstanceId"/>
+		<fieldDescription><![CDATA[processInstanceId]]></fieldDescription>
+	</field>
+	<field name="richieste_json" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="richieste_json"/>
+		<fieldDescription><![CDATA[richieste_json]]></fieldDescription>
+	</field>
+	<field name="commentoFase1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="commentoFase1"/>
+		<fieldDescription><![CDATA[commentoFase1]]></fieldDescription>
+	</field>
+	<field name="commentoCConti" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="commentoCConti"/>
+		<fieldDescription><![CDATA[commentoCConti]]></fieldDescription>
+	</field>
+	<field name="commentoDG" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="commentoDG"/>
+		<fieldDescription><![CDATA[commentoDG]]></fieldDescription>
+	</field>
+	<field name="checkCCGS" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="checkCCGS"/>
+		<fieldDescription><![CDATA[checkCCGS]]></fieldDescription>
+	</field>
+	<field name="expiryDateProposes" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="expiryDateProposes"/>
+		<fieldDescription><![CDATA[expiryDateProposes]]></fieldDescription>
+	</field>
+	<field name="commentoAutorizzaProposte" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="commentoAutorizzaProposte"/>
+		<fieldDescription><![CDATA[commentoAutorizzaProposte]]></fieldDescription>
+	</field>
+	<field name="descrizione" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descrizione"/>
+		<fieldDescription><![CDATA[descrizione]]></fieldDescription>
+	</field>
+	<field name="checkDG" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="checkDG"/>
+		<fieldDescription><![CDATA[checkDG]]></fieldDescription>
+	</field>
+	<field name="dueDateFase1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="dueDateFase1"/>
+		<fieldDescription><![CDATA[dueDateFase1]]></fieldDescription>
+	</field>
+	<field name="autorizzaProposte" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="autorizzaProposte"/>
+		<fieldDescription><![CDATA[autorizzaProposte]]></fieldDescription>
+	</field>
+	<field name="businessKey" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="businessKey"/>
+		<fieldDescription><![CDATA[businessKey]]></fieldDescription>
+	</field>
+	<field name="taskId" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="taskId"/>
+		<fieldDescription><![CDATA[taskId]]></fieldDescription>
+	</field>
+	<field name="startDate" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="startDate"/>
+		<fieldDescription><![CDATA[startDate]]></fieldDescription>
+	</field>
+	<field name="assigneeList_json" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="assigneeList_json"/>
+		<fieldDescription><![CDATA[assigneeList_json]]></fieldDescription>
+	</field>
+	<field name="commentoMinSalute" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="commentoMinSalute"/>
+		<fieldDescription><![CDATA[commentoMinSalute]]></fieldDescription>
+	</field>
+	<field name="startDateMACCISS" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="startDateMACCISS"/>
+		<fieldDescription><![CDATA[startDateMACCISS]]></fieldDescription>
+	</field>
+	<field name="commentoCTS" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="commentoCTS"/>
+		<fieldDescription><![CDATA[commentoCTS]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="90" y="15" width="480" height="30" uuid="4ab40593-7a2c-47ba-88d3-3798cd7fdeb3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titolo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

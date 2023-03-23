@@ -90,6 +90,7 @@ public class FlowsPdfResource {
 	 * @param tipologiaDoc      la "tipologia" di pdf da create (ad es.: "rigetto")
 	 * @return ResponseEntity restituisce il pdf generato
 	 */
+	
 	@RequestMapping(value = "/makePdf", headers = "Accept=application/pdf", method = RequestMethod.GET, produces = "application/pdf")
 	@ResponseBody
 	@Timed
